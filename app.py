@@ -64,7 +64,8 @@ elif page == "Prediction":
     st.sidebar.header("📥 Input Parameters")
 
     # Input parameters from sidebar
-    material = st.sidebar.number_input("Material", min_value=0, max_value=5, value=0)
+    material_option = st.sidebar.selectbox("Material", ["wax"])
+    material = 0
     feedrate = st.sidebar.number_input("Feedrate", step=0.01)
     clamp_pressure = st.sidebar.number_input("Clamp Pressure", step=0.01)
     X1_ActualPosition = st.sidebar.number_input("X1 Actual Position", step=0.01)
